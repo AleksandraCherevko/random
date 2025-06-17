@@ -7,10 +7,12 @@ const quotes = [
   "Clarity comes from simplicity.",
 ];
 
-const quoteElement = document.querySelectorAll("quote");
-const generateBtn = document.querySelectorAll(".generate-btn");
+const quoteElement = document.querySelector("#quote");
+const generateBtn = document.querySelector(".generate-btn");
 
 function showRandomQuote() {
   const randomIndex = Math.floor(Math.random() * quotes.length);
-  quoteElement.textContent = quotes[randomIndex];
+  const randomQuote = quotes[randomIndex];
+  quoteElement.textContent = randomQuote;
 }
+generateBtn.addEventListener("click", showRandomQuote);
