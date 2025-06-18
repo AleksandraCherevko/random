@@ -49,4 +49,5 @@ function showRandomQuote() {
   const randomQuote = quotes[randomIndex];
   quoteElement.textContent = `"${randomQuote.text}" — ${randomQuote.author}`;
 }
+
 generateBtn.addEventListener("click", showRandomQuote);
